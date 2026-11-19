@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+body{width:260px;margin:0;padding:14px;font:13px system-ui;background:#1e1e2e;color:#cdd6f4}
+h1{font-size:15px;margin:0 0 10px;color:#89b4fa}
+label{display:flex;justify-content:space-between;align-items:center;margin:9px 0;gap:8px}
+select{background:#313244;color:#cdd6f4;border:0;border-radius:6px;padding:3px}
+input[type=range]{width:100px}
+small{color:#a6adc8;display:block;margin-top:10px;line-height:1.45}
+</style></head><body>
+<h1>VidBoost</h1>
+<label>Enabled <input type="checkbox" id="enabled"></label>
+<label>Buffer ahead <span><input type="range" id="buffer" min="30" max="600" step="30"> <b id="bv"></b></span></label>
+<label>Max quality <select id="cap">
+  <option value="0">Auto</option><option value="1080">1080p</option><option value="720">720p</option>
+  <option value="480">480p</option><option value="360">360p</option></select></label>
+<label>Fast start (low quality first) <input type="checkbox" id="startLow"></label>
+<label>On-video HUD (Alt+B) <input type="checkbox" id="hud"></label>
+<small>Pause for a minute at the start, it keeps buffering while paused. Reload the movie page after changing buffer / fast start. Quality cap applies live.</small>
+<script src="popup.js"></script>
+</body></html>
